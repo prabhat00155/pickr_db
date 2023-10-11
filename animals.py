@@ -1,30 +1,30 @@
 import fetcher
+import json
 
 
 animals = [
     {'level': 1, 'name': 'Monkey', 'options': ['Donkey', 'Koala', 'Pig', 'Gorilla', 'Hamster', 'Porcupine', 'Bear']},
     {'level': 1, 'name': 'Buffalo', 'options': ['Elephant', 'Camel', 'Goat', 'Zebra', 'Cow', 'Donkey', 'Horse']},
-    {'level': 1, 'name': 'Camel', 'options': ['Elephant', 'Dog', 'Giraffe', 'Pig', 'Baboon', 'Ape']},
-    {'level': 1, 'name': 'Cat', 'options': ['Ape', 'Panther', 'Lion', 'Tiger', 'Cheetah', 'Dog']},
+    {'level': 1, 'name': 'Camel', 'options': ['Elephant', 'Dog', 'Giraffe', 'Pig', 'Baboon', 'Monkey']},
+    {'level': 1, 'name': 'Cat', 'options': ['Goat', 'Panther', 'Lion', 'Tiger', 'Cheetah', 'Dog']},
     {'level': 1, 'name': 'Dog', 'options': ['Rat', 'Bear', 'Impala', 'Goat', 'Walrus', 'Fox']},
     {'level': 1, 'name': 'Tiger', 'options': ['Lion', 'Fox', 'Puma', 'Jaguar', 'Leopard', 'Deer']},
     {'level': 1, 'name': 'Lion', 'options': ['Tiger', 'Cow', 'Bear', 'Crocodile', 'Cockroach', 'Snail']},
     {'level': 1, 'name': 'Elephant', 'options': ['Tiger', 'Giraffe', 'Goat', 'Pig', 'Ant', 'Chimpanzee']},
     {'level': 1, 'name': 'Giraffe', 'options': ['Camel', 'Dog', 'Bear', 'Kangaroo', 'Hyena', 'Jaguar']},
-    {'level': 1, 'name': 'Zebra', 'options': ['Camel', 'Lion', 'Bull', 'Squirrel', 'Snail', 'Panda']},
+    {'level': 1, 'name': 'Zebra', 'options': ['Camel', 'Lion', 'Cow', 'Squirrel', 'Snail', 'Panda']},
     {'level': 1, 'name': 'Sheep', 'options': ['Frog', 'Camel', 'Hippopotamus', 'Rhinocerous', 'Gorilla', 'Snail']},
     {'level': 1, 'name': 'Dolphin', 'options': ['Buffalo', 'Camel', 'Squirrel', 'Rabbit', 'Puma', 'Jaguar']},
     {'level': 1, 'name': 'Cow', 'options': ['Elephant', 'Frog', 'Donkey', 'Goat', 'Polar Bear', 'Hyena']},
-    {'level': 1, 'name': 'Horse', 'options': ['Zebra', 'Tiger', 'Koala', 'Rabbit', 'Ape', 'Bobcat']},
+    {'level': 1, 'name': 'Horse', 'options': ['Zebra', 'Tiger', 'Koala', 'Rabbit', 'Buffalo', 'Bobcat']},
     {'level': 1, 'name': 'Frog', 'options': ['Cat', 'Cow', 'Crocodile', 'Rabbit', 'Hyena', 'Cockroach']},
-    {'level': 2, 'name': 'Donkey', 'options': ['Lion', 'Monkey', 'Bull', 'Crocodile', 'Jellyfish', 'Ape']},
+    {'level': 2, 'name': 'Donkey', 'options': ['Lion', 'Monkey', 'Cow', 'Crocodile', 'Jellyfish', 'Dog']},
     {'level': 2, 'name': 'Crab', 'options': ['Buffalo', 'Monkey', 'Squirrel', 'Deer', 'Leopard', 'Snail']},
     {'level': 2, 'name': 'Bear', 'options': ['Lion', 'Monkey', 'Crocodile', 'Rabbit', 'Bobcat', 'Gorilla']},
     {'level': 2, 'name': 'Hippopotamus', 'options': ['Giraffe', 'Buffalo', 'Goat', 'Crab', 'Bobcat', 'Polar Bear']},
-    {'level': 2, 'name': 'Rhinocerous', 'options': ['Sheep', 'Dolphin', 'Bull', 'Goat', 'Ant', 'Polar Bear']},
+    {'level': 2, 'name': 'Rhinocerous', 'options': ['Sheep', 'Dolphin', 'Cow', 'Goat', 'Ant', 'Polar Bear']},
     {'level': 2, 'name': 'Koala', 'options': ['Zebra', 'Camel', 'Deer', 'Crocodile', 'Bobcat', 'Starfish']},
     {'level': 2, 'name': 'Kangaroo', 'options': ['Dolphin', 'Camel', 'Rabbit', 'Goat', 'Bobcat', 'Jellyfish']},
-    {'level': 2, 'name': 'Bull', 'options': ['Giraffe', 'Buffalo', 'Hippopotamus', 'Deer', 'Octopus', 'Puma']},
     {'level': 2, 'name': 'Spider', 'options': ['Monkey', 'Zebra', 'Pig', 'Rabbit', 'Jellyfish', 'Gorilla']},
     {'level': 2, 'name': 'Pig', 'options': ['Camel', 'Frog', 'Bear', 'Kangaroo', 'Octopus', 'Leopard']},
     {'level': 2, 'name': 'Crocodile', 'options': ['Tiger', 'Dog', 'Pig', 'Rabbit', 'Ant', 'Cockroach']},
@@ -32,7 +32,7 @@ animals = [
     {'level': 2, 'name': 'Rabbit', 'options': ['Frog', 'Cow', 'Fox', 'Crocodile', 'Chimpanzee', 'Snail']},
     {'level': 2, 'name': 'Fox', 'options': ['Camel', 'Tiger', 'Kangaroo', 'Rabbit', 'Chimpanzee', 'Panda']},
     {'level': 2, 'name': 'Deer', 'options': ['Camel', 'Cat', 'Fox', 'Rat', 'Cockroach', 'Snail']},
-    {'level': 2, 'name': 'Rat', 'options': ['Camel', 'Giraffe', 'Fox', 'Hippopotamus', 'Puma', 'Ape']},
+    {'level': 2, 'name': 'Rat', 'options': ['Camel', 'Giraffe', 'Fox', 'Hippopotamus', 'Puma', 'Dog']},
     {'level': 2, 'name': 'Snake', 'options': ['Tiger', 'Zebra', 'Fox', 'Rat', 'Ant', 'Puma']},
     {'level': 2, 'name': 'Squirrel', 'options': ['Camel', 'Cow', 'Goat', 'Rhinocerous', 'Hyena', 'Panda']},
     {'level': 3, 'name': 'Leopard', 'options': ['Hippopotamus', 'Snake', 'Chimpanzee', 'Bobcat', 'Gazelle', 'Sloth']},
@@ -41,21 +41,19 @@ animals = [
     {'level': 3, 'name': 'Polar Bear', 'options': ['Spider', 'Donkey', 'Panda', 'Ant', 'Sloth', 'Komodo Dragon']},
     {'level': 3, 'name': 'Cockroach', 'options': ['Rhinocerous', 'Pig', 'Puma', 'Hyena', 'Gazelle', 'Cheetah']},
     {'level': 3, 'name': 'Snail', 'options': ['Koala', 'Crocodile', 'Chimpanzee', 'Jellyfish', 'Komodo Dragon', 'Gazelle']},
-    {'level': 3, 'name': 'Hyena', 'options': ['Bull', 'Hippopotamus', 'Snail', 'Bobcat', 'Walrus', 'Hamster']},
+    {'level': 3, 'name': 'Hyena', 'options': ['Cow', 'Hippopotamus', 'Snail', 'Bobcat', 'Walrus', 'Hamster']},
     {'level': 3, 'name': 'Starfish', 'options': ['Pig', 'Squirrel', 'Ant', 'Puma', 'Baboon', 'Hamster']},
     {'level': 3, 'name': 'Jaguar', 'options': ['Hippopotamus', 'Crab', 'Polar Bear', 'Chimpanzee', 'Walrus', 'Impala']},
     {'level': 3, 'name': 'Puma', 'options': ['Kangaroo', 'Goat', 'Panda', 'Bobcat', 'Hamster', 'Gazelle']},
     {'level': 3, 'name': 'Bobcat', 'options': ['Goat', 'Snake', 'Jellyfish', 'Gorilla', 'Impala', 'Turtle']},
     {'level': 3, 'name': 'Octopus', 'options': ['Crab', 'Pig', 'Cockroach', 'Bobcat', 'Gerbil', 'Beaver']},
-    {'level': 3, 'name': 'Ape', 'options': ['Bear', 'Fox', 'Jaguar', 'Bobcat', 'Gerbil', 'Gazelle']},
-    {'level': 3, 'name': 'Jellyfish', 'options': ['Koala', 'Bear', 'Ant', 'Ape', 'Baboon', 'Gazelle']},
+    {'level': 3, 'name': 'Jellyfish', 'options': ['Koala', 'Bear', 'Ant', 'Crab', 'Baboon', 'Gazelle']},
     {'level': 3, 'name': 'Gorilla', 'options': ['Rhinocerous', 'Crab', 'Hyena', 'Octopus', 'Cheetah', 'Armadillo']},
     {'level': 3, 'name': 'Chimpanzee', 'options': ['Squirrel', 'Donkey', 'Bobcat', 'Puma', 'Turtle', 'Hamster']},
     {'level': 4, 'name': 'Impala', 'options': ['Puma', 'Snail', 'Armadillo', 'Cheetah', 'Ferret', 'Shark']},
     {'level': 4, 'name': 'Walrus', 'options': ['Chimpanzee', 'Gorilla', 'Hamster', 'Cheetah', 'Porcupine', 'Stingray']},
     {'level': 4, 'name': 'Komodo Dragon', 'options': ['Panda', 'Jellyfish', 'Armadillo', 'Hamster', 'Wildebeest', 'Eel']},
     {'level': 4, 'name': 'Gerbil', 'options': ['Starfish', 'Bobcat', 'Hamster', 'Baboon', 'Raccoon', 'Shark']},
-    {'level': 4, 'name': 'Hamster', 'options': ['Bobcat', 'Octopus', 'Komodo Dragon', 'Baboon', 'Whale', 'Raccoon']},
     {'level': 4, 'name': 'Cheetah', 'options': ['Starfish', 'Jellyfish', 'Gazelle', 'Hamster', 'Lemur', 'Seal']},
     {'level': 4, 'name': 'Gazelle', 'options': ['Chimpanzee', 'Octopus', 'Impala', 'Baboon', 'Raccoon', 'Eel']},
     {'level': 4, 'name': 'Turtle', 'options': ['Leopard', 'Snail', 'Walrus', 'Gerbil', 'Ferret', 'Seal']},
@@ -63,6 +61,7 @@ animals = [
     {'level': 4, 'name': 'Beaver', 'options': ['Puma', 'Chimpanzee', 'Gazelle', 'Walrus', 'Lemur', 'Ferret']},
     {'level': 4, 'name': 'Armadillo', 'options': ['Puma', 'Chimpanzee', 'Gerbil', 'Komodo Dragon', 'Tapir', 'Seal']},
     {'level': 4, 'name': 'Sloth', 'options': ['Puma', 'Polar Bear', 'Turtle', 'Beaver', 'Seal', 'Stingray']},
+    {'level': 4, 'name': 'Hamster', 'options': ['Bobcat', 'Octopus', 'Komodo Dragon', 'Baboon', 'Whale', 'Raccoon']},
     {'level': 5, 'name': 'Wildebeest', 'options': ['Impala', 'Cheetah', 'Tapir', 'Porcupine', 'Wallaby', 'Ibex']},
     {'level': 5, 'name': 'Lemur', 'options': ['Beaver', 'Hamster', 'Ferret', 'Porcupine', 'Ibex', 'Weasel']},
     {'level': 5, 'name': 'Eel', 'options': ['Gerbil', 'Komodo Dragon', 'Whale', 'Wildebeest', 'Sea Lion', 'Elk']},
@@ -98,11 +97,10 @@ animals = [
     {'level': 7, 'name': 'Llama', 'options': ['Alpaca', 'Weasel', 'Orangutan', 'Snow Leopard', 'Saiga antelope', 'Wombat']},
     {'level': 7, 'name': 'Guinea Pig', 'options': ['Yak', 'Seahorse', 'Gharial', 'Sea Cucumber', 'Iguana', 'Badger']},
     {'level': 8, 'name': 'Saiga antelope', 'options': ['Bison', 'Gharial', 'Barracuda', 'Pangolin', 'Dugong', 'Prairie Dog']},
-    {'level': 8, 'name': 'Pangolin', 'options': ['Snow Leopard', 'Llama', 'Lobster', 'Anteater', 'Saola', 'Otter']},
+    {'level': 8, 'name': 'Pangolin', 'options': ['Snow Leopard', 'Llama', 'Lobster', 'Iguana', 'Saola', 'Otter']},
     {'level': 8, 'name': 'Sea Urchin', 'options': ['Squid', 'Guinea Pig', 'Beetle', 'Hedgehog', 'Otter', 'Guanaco']},
     {'level': 8, 'name': 'Anteater', 'options': ['Coati', 'Gharial', 'Beetle', 'Wombat', 'Dugong', 'Otter']},
     {'level': 8, 'name': 'Badger', 'options': ['Snow Leopard', 'Guinea Pig', 'Beetle', 'Barracuda', 'Vaquita', 'Prairie Dog']},
-    {'level': 8, 'name': 'Wombat', 'options': ['Bison', 'Squid', 'Anteater', 'Beetle', 'Otter', 'Dugong']},
     {'level': 8, 'name': 'Beetle', 'options': ['Bison', 'Sea Cucumber', 'Saiga antelope', 'Pangolin', 'Mandrill', 'Prairie Dog']},
     {'level': 8, 'name': 'Hedgehog', 'options': ['Sea Cucumber', 'Gharial', 'Sea Urchin', 'Anteater', 'Okapi', 'Otter']},
     {'level': 8, 'name': 'Barracuda', 'options': ['Snow Leopard', 'Bison', 'Pangolin', 'Lobster', 'Meerkat', 'Mandrill']},
@@ -131,7 +129,9 @@ animals = [
 ]
 
 quiz = []
-
 for animal in animals:
-    curr = {}
-    curr['options'] =  fetcher.fetch('animal', animal)
+    animal['urls'] = fetcher.fetch('animal', animal['name'])
+    quiz.append(animal)
+
+with open("animals3.json", "w") as f:
+    f.write(json.dumps(quiz))
