@@ -1,4 +1,5 @@
 import fetcher
+import json
 
 birds = [
     {'level': 1, 'name': 'Parrot', 'options': ['Pigeon', 'Owl', 'Woodpecker', 'Pelican', 'Raven', 'Goose']},
@@ -105,11 +106,14 @@ birds = [
     {'level': 10, 'name': 'Bufflehead', 'options': ['Teal', 'Rhea', 'Kori Bustard', 'Bunting', 'Heron', 'Weka']},
     {'level': 10, 'name': 'Shikra', 'options': ['Teal', 'Canary', 'Stork', 'Gannet', 'Dunnock', 'Dunlin']},
     {'level': 10, 'name': 'Dunlin', 'options': ['Hawfinch', 'Willow Tit', 'Stork', 'Condor', 'Cassowary', 'Shama']},
-    {'level': 10, 'name': 'Hamerkop', 'options': ['Merlin', 'Secretarybird', 'Condor', 'Bunting', 'Saddle-billed Stork', 'Greater Roadrunner']}
+    {'level': 10, 'name': 'Hamerkop', 'options': ['Merlin', 'Secretarybird', 'Condor', 'Bunting', 'Saddle-billed Stork', 'Greater Roadrunner']},
 ]
 
 quiz = []
 
 for bird in birds:
-  curr = {}
-  curr['options'] =  fetcher.fetch('bird', bird)
+  bird['urls'] =  fetcher.fetch('bird', bird['name'])
+  quiz.append(bird)
+
+with open("output/birds.json", "w") as f:
+    f.write(json.dumps(quiz))
