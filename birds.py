@@ -1,5 +1,5 @@
-import fetcher
 import json
+import fetcher
 
 birds = [
     {'level': 1, 'name': 'Parrot', 'options': ['Pigeon', 'Owl', 'Woodpecker', 'Pelican', 'Raven', 'Goose']},
