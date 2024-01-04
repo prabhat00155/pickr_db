@@ -1,5 +1,6 @@
-import fetcher
 import json
+
+import fetcher
 
 
 animals = [
