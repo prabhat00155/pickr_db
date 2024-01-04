@@ -1,3 +1,5 @@
+import json
+
 import fetcher
 
 
@@ -76,5 +78,8 @@ cities = [
 quiz = []
 
 for city in cities:
-    curr = {}
-    curr['options'] =  fetcher.fetch('city', city)
+    city['urls'] =  fetcher.fetch('city', city['name'])
+    quiz.append(city)
+
+with open("output/cities.json", "w") as f:
+    f.write(json.dumps(quiz))
