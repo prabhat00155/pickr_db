@@ -1,3 +1,5 @@
+import json
+
 import fetcher
 
 
@@ -196,5 +198,8 @@ dishes = [
 quiz = []
 
 for dish in dishes:
-    curr = {}
-    curr['options'] =  fetcher.fetch('dish', dish)
+    dish['urls'] =  fetcher.fetch('dish', dish['name'])
+    quiz.append(dish)
+
+with open("output/dishes.json", "w") as f:
+    f.write(json.dumps(quiz))
