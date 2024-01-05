@@ -1,3 +1,5 @@
+import json
+
 import fetcher
 
 
@@ -118,5 +120,8 @@ fruits = [
 quiz = []
 
 for fruit in fruits:
-    curr = {}
-    curr['options'] =  fetcher.fetch('fruit', fruit)
+    fruit['urls'] =  fetcher.fetch('fruit', fruit['name'])
+    quiz.append(fruit)
+
+with open("output/fruit.json", "w") as f:
+    f.write(json.dumps(quiz))
