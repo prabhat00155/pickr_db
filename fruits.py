@@ -123,5 +123,5 @@ for fruit in fruits:
     fruit['urls'] =  fetcher.fetch('fruit', fruit['name'])
     quiz.append(fruit)
 
-with open("output/fruit.json", "w") as f:
+with open("output/fruits.json", "w") as f:
     f.write(json.dumps(quiz))
