@@ -1,3 +1,5 @@
+import json
+
 import fetcher
 
 
@@ -201,5 +203,8 @@ flags = [
 quiz = []
 
 for flag in flags:
-    curr = {}
-    curr['options'] =  fetcher.fetch('flag', flag)
+    flag['urls'] =  fetcher.fetch('flag', flag['name'])
+    quiz.append(flag)
+
+with open("output/flags.json", "w") as f:
+    f.write(json.dumps(quiz))
