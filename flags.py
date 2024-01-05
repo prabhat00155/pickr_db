@@ -195,7 +195,7 @@ flags = [
     {'level': 10, 'name': 'St. Vincent Grenadines', 'options': ['Cambodia', 'Lesotho', 'Marshall Islands', 'Tonga', 'Cabo Verde', 'Eritrea']},
     {'level': 10, 'name': 'Zambia', 'options': ['Malawi', 'Guinea-Bissau', 'North Macedonia', 'Saint Kitts and Nevis', 'Eswatini', 'Central African Republic']},
     {'level': 10, 'name': 'Burkina Faso', 'options': ['Sierra Leone', 'Benin', 'Uganda', 'Saint Lucia', 'Burundi', 'Cabo Verde']},
-    {'level': 10, 'name': 'Timor-Leste', 'options': ['Lesotho', 'Seychelles', 'Panama', 'North Macedonia', 'Central African Republic', 'Solomon Islands']},
+    {'level': 10, 'name': 'East Timor', 'options': ['Lesotho', 'Seychelles', 'Panama', 'North Macedonia', 'Central African Republic', 'Solomon Islands']},
     {'level': 10, 'name': 'Brunei', 'options': ['Antigua and Barbuda', 'Djibouti', 'Palau', 'Saint Kitts and Nevis', 'Samoa', 'Comoros']},
     {'level': 10, 'name': 'Sao Tome and Principe', 'options': ['Laos', 'Malawi', 'Togo', 'Belize', 'Solomon Islands', 'Central African Republic']}
 ]
