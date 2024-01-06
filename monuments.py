@@ -1,3 +1,5 @@
+import json
+
 import fetcher
 
 
@@ -135,5 +137,8 @@ monuments = [
 quiz = []
 
 for monument in monuments:
-    curr = {}
-    curr['options'] =  fetcher.fetch('monument', monument)
+    monument['urls'] = fetcher.fetch('monument', monument['name'])
+    quiz.append(monument)
+
+with open("output/monuments.json", "w") as f:
+    f.write(json.dumps(quiz))
