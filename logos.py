@@ -1,3 +1,5 @@
+import json
+
 import fetcher
 
 
@@ -213,5 +215,8 @@ logos = [
 quiz = []
 
 for logo in logos:
-    curr = {}
-    curr['options'] =  fetcher.fetch('logo', logo)
+    logo['urls'] =  fetcher.fetch('logo', logo['name'])
+    quiz.append(logo)
+
+with open("output/logos.json", "w") as f:
+    f.write(json.dumps(quiz))
