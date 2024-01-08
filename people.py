@@ -1,7 +1,9 @@
+import json
+
 import fetcher
 
 
-dishes = [
+people = [
   {'name': 'Mahatma Gandhi', 'options': ['Jawaharlal Nehru', 'Subhas Chandra Bose', 'Sardar Vallabhbhai Patel', 'Rabindranath Tagore', 'Ben Kingsley', 'Lala Lajpat Rai', 'Bal Gangadhar Tilak'], 'level': 1},
   {'name': 'Albert Enstein', 'options': ['Robert Oppenheimer', 'Nikola Tesla', 'Niels Bohr', 'Werner Heisenberg', 'Max Planck', 'Richard Feynman'], 'level': 1},
   {'name': 'Mother Teresa', 'options': ['Helen Keller', 'Aga Bojaxhiu', 'Florence Nightingale', 'Irmã Dulce', 'Rosa Parks', 'Dranafile Bojaxhiu'], 'level': 1},
@@ -215,6 +217,9 @@ dishes = [
 
 quiz = []
 
-for dish in dishes:
-    curr = {}
-    curr['options'] =  fetcher.fetch('dish', dish)
+for p in people:
+    p['urls'] =  fetcher.fetch('people', p['name'])
+    quiz.append(p)
+
+with open("output/people.json", "w") as f:
+    f.write(json.dumps(quiz))
