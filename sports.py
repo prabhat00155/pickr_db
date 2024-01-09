@@ -1,3 +1,5 @@
+import json
+
 import fetcher
 
 
@@ -139,5 +141,8 @@ sports = [
 quiz = []
 
 for sport in sports:
-    curr = {}
-    curr['options'] =  fetcher.fetch('sport', sport)
+    sport['urls'] =  fetcher.fetch('sport', sport['name'])
+    quiz.append(sport)
+
+with open("output/sports.json", "w") as f:
+    f.write(json.dumps(quiz))
