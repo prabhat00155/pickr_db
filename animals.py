@@ -134,5 +134,5 @@ for animal in animals:
     animal['urls'] = fetcher.fetch('animal', animal['name'])
     quiz.append(animal)
 
-with open("animals3.json", "w") as f:
+with open("output/animals.json", "w") as f:
     f.write(json.dumps(quiz))
