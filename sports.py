@@ -1,4 +1,5 @@
 import json
+import time
 
 import fetcher
 
@@ -142,6 +143,7 @@ quiz = []
 
 for sport in sports:
     sport['urls'] =  fetcher.fetch('sport', sport['name'])
+    time.sleep(1)
     quiz.append(sport)
 
 with open("output/sports.json", "w") as f:
