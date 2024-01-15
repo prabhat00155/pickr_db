@@ -1,4 +1,5 @@
 import json
+import time
 
 import fetcher
 
@@ -216,6 +217,7 @@ quiz = []
 
 for logo in logos:
     logo['urls'] =  fetcher.fetch('logo', logo['name'])
+    time.delay(1)
     quiz.append(logo)
 
 with open("output/logos.json", "w") as f:
