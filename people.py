@@ -1,4 +1,5 @@
 import json
+import time
 
 import fetcher
 
@@ -219,6 +220,7 @@ quiz = []
 
 for p in people:
     p['urls'] =  fetcher.fetch('people', p['name'])
+    time.sleep(1)
     quiz.append(p)
 
 with open("output/people.json", "w") as f:
