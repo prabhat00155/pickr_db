@@ -177,7 +177,7 @@ logos = [
     {'level': 8, 'name': 'Turkish Airlines', 'options': ['Walt Disney', 'Monopoly', "Little Caesar's", 'Scion', 'Ryanair', 'Converse']},
     {'level': 8, 'name': "Dunkin' Donuts", 'options': ['Subaru', 'Walt Disney', 'Iberia (airline)', 'Brave', 'SriLankan Airlines', 'Chanel']},
     {'level': 9, 'name': 'Dreamworks', 'options': ['Duolingo', 'Alfa Romeo', 'Southwest Airlines', 'Dodge', 'BBM', 'WestJet']},
-    {'level': 9, 'name': 'Lemonheads', 'options': ['Alfa Romeo', 'Qantas', 'Dreamworks', 'Southwest Airlines', 'Shutterstock', 'WestJet']},
+    {'level': 9, 'name': 'Lemonhead', 'options': ['Alfa Romeo', 'Qantas', 'Dreamworks', 'Southwest Airlines', 'Shutterstock', 'WestJet']},
     {'level': 9, 'name': 'Jelly Belly', 'options': ['Iberia (airline)', 'Duolingo', 'Southwest Airlines', 'Dodge', 'Häagen-Dazs', 'Qatar Airways']},
     {'level': 9, 'name': 'Austrian Airlines', 'options': ['Iberia (airline)', 'Infiniti', 'Caribbean Airlines', 'Jelly Belly', 'WestJet', 'Air Djibouti']},
     {'level': 9, 'name': 'Dodge', 'options': ["Little Caesar's", "Dunkin' Donuts", 'SriLankan Airlines', 'Southwest Airlines', 'Gerber', 'JD.com']},
@@ -217,7 +217,7 @@ quiz = []
 
 for logo in logos:
     logo['urls'] =  fetcher.fetch('logo', logo['name'])
-    time.delay(1)
+    time.sleep(1)
     quiz.append(logo)
 
 with open("output/logos.json", "w") as f:
