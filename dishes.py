@@ -119,7 +119,6 @@ dishes = [
     {'level': 6, 'name': 'Yorkshire Pudding', 'options': ['Bunny chow', 'Pastiera', 'Gyros', 'Poke', 'Tiramisù', 'Kunāfah']},
     {'level': 7, 'name': 'Gua bao', 'options': ['Nigiri', 'Gyros', 'Maakouda', 'Tempe orek', 'Som tam', 'Atsuage']},
     {'level': 7, 'name': 'Kunāfah', 'options': ['Goulash', 'Panini', 'Koliva', 'Tempe orek', 'Carciofi alla Giudía', 'Som tam']},
-    {'level': 7, 'name': 'Pesto Genovese', 'options': ['Calzone', 'Poke', 'Sekihan', 'Makdous', 'Aburaage', 'Ketoprak']},
     {'level': 7, 'name': 'Dim Sum', 'options': ['Corn dog', 'Massaman curry', 'Carciofi alla Romana', 'Tiramisù', 'Shakshuka', 'Som tam']},
     {'level': 7, 'name': 'Schnitzel', 'options': ['Ice Cream Sandwich', 'Turkish delight/Lokum', 'Koshary', 'Tiramisù', 'Zaalouk', 'Shakshuka']},
     {'level': 7, 'name': 'Tempe orek', 'options': ['Ratatouille', 'Focaccia', 'Koshary', 'Gazpacho de mango', 'Ketoprak', 'Atsuage']},
