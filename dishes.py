@@ -173,7 +173,6 @@ dishes = [
     {'level': 10, 'name': 'Tom yum goong', 'options': ['Shakshuka', 'Atsuage', 'Mayak gimbap', 'Matbucha', 'Kaiserschmarrn', 'Ogokbap']},
     {'level': 10, 'name': 'Pierogi', 'options': ['Zaalouk', 'Clafoutis', 'Barbacoa', 'Tombet', 'Ogokbap', 'Kaiserschmarrn']},
     {'level': 10, 'name': 'Ogokbap', 'options': ['Milho frito', 'Clafoutis', 'Poutine', 'Börek', 'Peixinhos da horta', 'Dondurma']},
-    {'level': 10, 'name': 'Pastel de nata', 'options': ['Speculaas', 'Milho frito', 'Pavlova', 'Tombet', 'Kaiserschmarrn', 'Fasolada']},
     {'level': 10, 'name': 'Arepas', 'options': ['Aburaage', 'Kateh', 'Pavlova', 'Ful medames', 'Pierogi', 'Tteok']},
     {'level': 10, 'name': 'Tteok', 'options': ['Crumble', 'Speculaas', 'Pastel de Belém', 'Barbacoa', 'Manti', 'Ogokbap']},
     {'level': 10, 'name': 'Prebranac', 'options': ['Milho frito', 'Tortas', 'Ful medames', 'Pavlova', 'Kepta duona', 'Ogokbap']},
