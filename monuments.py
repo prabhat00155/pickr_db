@@ -4,7 +4,7 @@ import fetcher
 
 
 monuments = [
-    {'level': 1, 'name': 'Taj Mahal', 'options': ['Colosseum', 'Tower Bridge', 'Liberty Bell', 'Golden Gate House', 'Sydney Harbour Bridge', 'Statue Of Unity']},
+    {'level': 1, 'name': 'Taj Mahal', 'options': ['Colosseum', 'Tower Bridge', 'Liberty Bell', 'Golden Gate', 'Sydney Harbour Bridge', 'Statue Of Unity']},
     {'level': 1, 'name': 'Pyramid', 'options': ['Charminar', 'Great Wall of China', 'Agra Fort', 'Lake Palace', 'Sydney Harbour Bridge', 'Meenakshi Temple']},
     {'level': 1, 'name': 'Qutub Minar', 'options': ['Great Wall of China', 'Taj Mahal', 'British Museum', 'Trafalgar Square', 'Capitol Hill', 'Khajuraho Temple']},
     {'level': 1, 'name': 'Great Wall of China', 'options': ['Stonehenge', 'Taj Mahal', 'British Museum', 'Sydney Opera House', 'Meenakshi Temple', 'Empire State Building']},
@@ -28,15 +28,15 @@ monuments = [
     {'level': 2, 'name': 'Hawa Mahal', 'options': ['Stonehenge', 'Tower Bridge', 'Agra Fort', 'Petronas Towers', 'Meenakshi Temple', 'Tower of London']},
     {'level': 2, 'name': 'Howrah Bridge', 'options': ['Stonehenge', 'Colosseum', 'Lotus Temple', 'Agra Fort', 'Great Sphinx of Giza', 'Khajuraho Temple']},
     {'level': 2, 'name': 'Blue Domes of Oia', 'options': ['Qutub Minar', 'Tower Bridge', 'Atomium', 'Gateway Of India', 'Notre Dame', 'Mysore Palace']},
-    {'level': 2, 'name': 'Liberty Bell', 'options': ['White House', 'Eiffel Tower', 'Hawa Mahal', 'Golden Gate House', 'Notre Dame', 'Mahabodhi Temple']},
+    {'level': 2, 'name': 'Liberty Bell', 'options': ['White House', 'Eiffel Tower', 'Hawa Mahal', 'Golden Gate', 'Notre Dame', 'Mahabodhi Temple']},
     {'level': 2, 'name': 'One World Trade Centre', 'options': ['India Gate', 'Buckingham Palace', 'Lake Palace', 'Golden Temple', 'Statue Of Unity', 'Victoria Memorial']},
     {'level': 2, 'name': 'Atomium', 'options': ['Colosseum', 'Great Wall of China', 'Gateway Of India', 'Sydney Opera House', 'Great Sphinx of Giza', 'Notre Dame']},
     {'level': 2, 'name': 'British Museum', 'options': ['Big Ben', 'Eiffel Tower', 'Agra Fort', 'Liberty Bell', 'Notre Dame', 'Western Wall']},
     {'level': 2, 'name': 'Lake Palace', 'options': ['Stonehenge', 'White House', 'Atomium', 'Sydney Opera House', 'Griffith Observatory', 'Notre Dame']},
-    {'level': 2, 'name': 'Trafalgar Square', 'options': ['Pyramid', 'Charminar', 'One World Trade Centre', 'Golden Gate House', 'Sydney Harbour Bridge', 'Victoria Memorial']},
+    {'level': 2, 'name': 'Trafalgar Square', 'options': ['Pyramid', 'Charminar', 'One World Trade Centre', 'Golden Gate', 'Sydney Harbour Bridge', 'Victoria Memorial']},
     {'level': 2, 'name': 'Agra Fort', 'options': ['White House', 'Buckingham Palace', 'Liberty Bell', 'One World Trade Centre', 'Griffith Observatory', 'Empire State Building']},
     {'level': 2, 'name': 'Sydney Opera House', 'options': ['Pyramid', 'Stonehenge', 'Agra Fort', 'Lotus Temple', 'Mysore Palace', 'Empire State Building']},
-    {'level': 2, 'name': 'Golden Gate House', 'options': ['Statue of Liberty', 'Colosseum', 'Gateway Of India', 'Blue Domes of Oia', 'Great Sphinx of Giza', 'Notre Dame']},
+    {'level': 2, 'name': 'Golden Gate', 'options': ['Statue of Liberty', 'Colosseum', 'Gateway Of India', 'Blue Domes of Oia', 'Great Sphinx of Giza', 'Notre Dame']},
     {'level': 3, 'name': 'Empire State Building', 'options': ['Agra Fort', 'Lotus Temple', 'Sydney Harbour Bridge', 'Notre Dame', "St. Peter's Basilica", 'Basilica of Bom Jesus']},
     {'level': 3, 'name': 'Statue Of Unity', 'options': ['Hawa Mahal', 'Red Fort', 'Griffith Observatory', 'Western Wall', 'Gol Gumbaz', 'Louvre Museum']},
     {'level': 3, 'name': 'Great Sphinx of Giza', 'options': ['Gateway Of India', 'Lotus Temple', 'Griffith Observatory', 'Mysore Palace', 'Palace of Versailles', 'Acropolis']},
