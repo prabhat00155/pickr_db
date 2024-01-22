@@ -219,7 +219,7 @@ people = [
 quiz = []
 
 for p in people:
-    p['urls'] =  fetcher.fetch('people', p['name'])
+    p['urls'] = fetcher.fetch('people', p['name'])
     time.sleep(1)
     quiz.append(p)
 
