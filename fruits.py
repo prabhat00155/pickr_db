@@ -120,7 +120,7 @@ fruits = [
 quiz = []
 
 for fruit in fruits:
-    fruit['urls'] =  fetcher.fetch('fruit', fruit['name'])
+    fruit['urls'] = fetcher.fetch('fruit', fruit['name'])
     quiz.append(fruit)
 
 with open("output/fruits.json", "w") as f:
