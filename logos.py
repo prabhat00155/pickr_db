@@ -216,7 +216,7 @@ logos = [
 quiz = []
 
 for logo in logos:
-    logo['urls'] =  fetcher.fetch('logo', logo['name'])
+    logo['urls'] = fetcher.fetch('logo', logo['name'])
     time.sleep(1)
     quiz.append(logo)
 
