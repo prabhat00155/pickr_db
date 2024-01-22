@@ -140,7 +140,7 @@ sports = [
 quiz = []
 
 for sport in sports:
-    sport['urls'] =  fetcher.fetch('sport', sport['name'])
+    sport['urls'] = fetcher.fetch('sport', sport['name'])
     time.sleep(1)
     quiz.append(sport)
 
