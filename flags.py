@@ -203,7 +203,7 @@ flags = [
 quiz = []
 
 for flag in flags:
-    flag['urls'] =  fetcher.fetch('flag', flag['name'])
+    flag['urls'] = fetcher.fetch('flag', flag['name'])
     quiz.append(flag)
 
 with open("output/flags.json", "w") as f:
